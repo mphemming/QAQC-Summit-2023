@@ -57,9 +57,9 @@ This code is slow, taking 30 - 60 mins to create a product depending on the leng
 
 ### UpdateLTSP_example.py
 
-This script first determines what's the latest deployment date on thredds and what's the end period of the LTSP stored locally. This is done using functions 'get_latest_deployment_date' which is used in 'determUpdate'. Functions 'updateAggregatedLTSP' / 'updateHourlyLTSP', 'updateGriddedLTSP' are then used to update the LTSP rather than create from scratch. 
+This script first determines what's the latest deployment date on thredds and what's the end date of the LTSP stored locally. This is done using functions 'get_latest_deployment_date' which is used in 'determUpdate'. Functions 'updateAggregatedLTSP' / 'updateHourlyLTSP' / 'updateGriddedLTSP' are then used to update the LTSP rather than create from scratch. 
 
-A new LTSP for the period that is new (between the end date of the LTSP stored locally and the end date of the latest deployment on thredds) is then created locally. This new short LTSP is then concatenated with the previous LTSP. An 'OBSERVATION' and 'INSTRUMENT' dataset is concatenated first, then these are merged together. Global attributes are copied over from the previous LTSP version, but some are modified to reflect changes. The filename is also updated with the latest deployment end date. 
+A new LTSP is created locally for the period that is new (between the end date of the LTSP stored locally and the end date of the latest deployment on thredds). This new recent LTSP is then concatenated with the previous longer LTSP. Two 'OBSERVATION' and 'INSTRUMENT' datasets are concatenated first, then these are merged together. Global attributes are copied over from the previous LTSP version, but some are modified to reflect changes. The filename is also updated with the latest deployment end date. The dataset is then saved as a netCDF file. 
 
 If you want to see an example of how I am using this for the QAQC auto reporting, you can check out this script [here](https://github.com/mphemming/QAQC_report_code/blob/master/Code/QCreport_checkLTSPs.py)
 
