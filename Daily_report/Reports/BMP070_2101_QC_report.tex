@@ -1,0 +1,65 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{geometry}%
+\geometry{tmargin=2cm,lmargin=2cm}%
+\usepackage{rotating}%
+\usepackage{sectsty}%
+\usepackage[compact, big]{titlesec}%
+\usepackage[section]{placeins}%
+\usepackage{graphicx}%
+\usepackage{hyperref}%
+\usepackage{morefloats}%
+%
+\setcounter{tocdepth}{4}%
+\usepackage{placeins}%
+\usepackage{endfloat}%
+\renewcommand{\efloatseparator}{\mbox{}}%
+%
+\begin{document}%
+\large%
+\fontsize{18}{16}%
+\begin{titlepage}%
+\begin{center}%
+\LARGE%
+\textbf{Daily report of results during RV Investigator Cruise <cruise identifier here>}%
+\\%
+\\%
+\vfill%
+\vfill%
+\newline%
+\textbf{May 08, 2023}%
+\vfill%
+\includegraphics[scale=0.55]{F:/OneDrive - UNSW/Work/QC_reports/Basic_Template_Investigator/Plots/RVinvestigator.png}%
+\end{center}%
+\end{titlepage}%
+\tableofcontents%
+\section{Results}%
+\label{sec:Results}%
+\begin{tabular}{|l|l|}%
+\hline%
+a&1\\%
+\hline%
+b&2\\%
+\hline%
+c&3\\%
+\hline%
+\end{tabular}%
+
+
+\begin{figure}[htbp]%
+\centering%
+\includegraphics[width=0.65\linewidth]{F:/OneDrive - UNSW/Work/QC_reports/Basic_Template_Investigator/Plots/TEMP_BMP070_1711.png}%
+\caption{This caption explains the plot.}%
+\end{figure}
+
+%
+\subsection{subsection}%
+\label{subsec:subsection}%
+This is a new subsection
+
+%
+\end{document}
